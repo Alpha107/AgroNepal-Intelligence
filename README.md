@@ -1,4 +1,4 @@
-# 🌱 AgroNepal AI: Advanced Agricultural Intelligence Dashboard
+# AgroNepal AI: Advanced Agricultural Intelligence Dashboard
 
 AgroNepal AI is a high-precision, data-driven agricultural intelligence platform designed to empower farmers, policy-makers, and agricultural researchers in Nepal. By integrating real-time weather data from the **NASA POWER API** with **Machine Learning (Random Forest)**, the platform provides tailored crop suitability insights for all 77 districts of Nepal.
 
