@@ -2,7 +2,15 @@
 
 AgroNepal AI is a high-precision, data-driven agricultural intelligence platform designed to empower farmers, policy-makers, and agricultural researchers in Nepal. By integrating real-time weather data from the **NASA POWER API** with **Machine Learning (Random Forest)**, the platform provides tailored crop suitability insights for all 77 districts of Nepal.
 
-![Dashboard Preview](https://via.placeholder.com/1200x600/0f172a/10b981?text=AgroNepal+AI+Strategic+Intelligence)
+---
+
+<img width="1848" height="845" alt="Screenshot 2026-04-28 110607" src="https://github.com/user-attachments/assets/62d1240e-126c-488e-b7b6-f59cf2687810" />
+
+---
+
+<img width="1857" height="817" alt="Screenshot 2026-04-28 110618" src="https://github.com/user-attachments/assets/13af9be1-4bd0-4d69-96fc-725f0f7e9ad5" />
+
+---
 
 ## 🚀 Key Features
 
@@ -99,6 +107,32 @@ The model doesn't just predict crops; it analyzes **Ecological Synergies** to su
 - **Map Boundaries**: High-resolution GeoJSON for Nepal's 77 districts.
 - **Climate Data**: NASA Prediction Of Worldwide Energy Resources (POWER).
 - **Agricultural Logic**: Expert-vetted ecological zone crop mapping.
+
+## Images
+
+<img width="1318" height="802" alt="Screenshot 2026-04-28 110627" src="https://github.com/user-attachments/assets/79a420c7-397e-4502-b679-fc9a84ed1206" />
+
+---
+
+<img width="1251" height="566" alt="Screenshot 2026-04-28 110649" src="https://github.com/user-attachments/assets/fc6e679c-a19a-4a1a-a084-84483b44b13c" />
+
+---
+
+<img width="1267" height="655" alt="Screenshot 2026-04-28 110656" src="https://github.com/user-attachments/assets/4df70a3f-e17a-4f5e-8342-1a16f7001508" />
+
+---
+
+<img width="1249" height="552" alt="Screenshot 2026-04-28 110704" src="https://github.com/user-attachments/assets/77204b35-dc4c-435f-9b5b-443eac926890" />
+
+---
+
+<img width="1201" height="793" alt="Screenshot 2026-04-28 110714" src="https://github.com/user-attachments/assets/58c7b24c-97d1-4f93-9442-6e0e012f6d4e" />
+
+---
+
+<img width="1084" height="672" alt="Screenshot 2026-04-28 110722" src="https://github.com/user-attachments/assets/f9693444-8a75-4c69-b167-cb164a2066c3" />
+
+---
 
 ## 🤝 Contributing
 Contributions are welcome! If you'd like to improve the AI model or add new features, please fork the repository and submit a pull request.
