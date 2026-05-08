@@ -1,88 +1,207 @@
-# 🌱 AgroNepal AI: Advanced Agricultural Intelligence Dashboard
+# AgroNepal Intelligence: AI-Powered Agricultural Decision Support System for Nepal
 
-AgroNepal AI is a high-precision, data-driven agricultural intelligence platform designed to empower farmers, policy-makers, and agricultural researchers in Nepal. By integrating real-time weather data from the **NASA POWER API** with **Machine Learning (Random Forest)**, the platform provides tailored crop suitability insights for all 77 districts of Nepal.
+AgroNepal Intelligence is an AI-driven agricultural intelligence platform designed to support data-informed farming decisions across all 77 districts of Nepal. The system combines satellite-based climate data, machine learning, and interactive geographic visualization to analyze regional agricultural conditions and recommend suitable crops based on district-level environmental patterns.
 
----
-
-<img width="1848" height="845" alt="Screenshot 2026-04-28 110607" src="https://github.com/user-attachments/assets/62d1240e-126c-488e-b7b6-f59cf2687810" />
+The platform aims to bridge the gap between modern data science technologies and practical agricultural planning by transforming complex climate datasets into understandable and actionable insights.
 
 ---
 
-<img width="1857" height="817" alt="Screenshot 2026-04-28 110618" src="https://github.com/user-attachments/assets/13af9be1-4bd0-4d69-96fc-725f0f7e9ad5" />
+**Project Objectives**
+* Analyze long-term climate conditions across Nepal
+* Provide district-specific crop recommendations
+* Visualize agricultural and environmental data interactively
+* Support sustainable and climate-aware farming decisions
+* Demonstrate the application of AI and data engineering in agriculture
 
 ---
 
-## 💡 The Inspiration Behind AgroNepal AI
+**Key Features**
 
-Nepal is fundamentally an agricultural nation, with a large majority of our population depending on farming for their livelihood. Despite this deep agricultural heritage, our farmers frequently struggle with unpredictable weather patterns, the undeniable impacts of climate change, and a lack of localized, data-driven insights. Traditional farming knowledge is invaluable, but it is increasingly being challenged by rapidly shifting ecological conditions.
+### Interactive District Intelligence Map
+* Interactive map of all 77 districts of Nepal using Leaflet.js
+* District highlighting and tooltip-based insights
+* Geographic climate and agricultural visualization
 
-**The Driving Idea:** 
-I noticed a massive gap between the advanced technologies available today (like Machine Learning and satellite data) and the tools actually accessible to Nepali agriculture. The driving force behind AgroNepal AI was a simple question: *How can we democratize high-level environmental data and make it actionable for Nepal?* 
+### ASA POWER Climate Data Integration
+The platform integrates historical weather and environmental data from NASA POWER API including:
+* Temperature
+* Precipitation
+* Humidity
+This enables localized climate profiling for agricultural analysis.
 
-I wanted to build a bridge, a tool that doesn't just display weather numbers, but actively translates that data into practical, strategic advice. By leveraging NASA's POWER API and training a Random Forest model on ecological zones, the goal was to create an intuitive dashboard that tells you exactly what crops will thrive in your specific district, what companion plants to use, and what climate risks to anticipate.
+### Machine Learning-Based Crop Recommendation
+A Random Forest Classifier is used to predict the most suitable crops for each district based on:
+* Climate conditions
+* Rainfall patterns
+* Humidity levels
+* Ecological characteristics
 
-## 🚀 Key Features
+The system recommends:
+* Top suitable crops
+* Companion planting combinations
+* Climate-related agricultural risks
 
-- **📍 Interactive District Intelligence**: A professional Leaflet-based map of Nepal's 77 districts with high-fidelity glassmorphism tooltips and district spotlighting.
-- **🛰️ NASA POWER API Integration**: Real-time historical weather data ingestion (Temperature, Precipitation, Humidity) for precise local climate profiling.
-- **📈 10-Year Climate Trends**: Visual 10-year historical analysis (2014-2024) featuring Line and Area charts for long-term rainfall and temperature shifts.
-- **🤖 AI-Driven Crop Suitability**: A Random Forest ML model trained on ecological zone data to recommend the Top 5 most viable crops per district.
-- **💧 Irrigation & Resource Tracking**: Dynamic tracking of irrigation coverage percentage and available agricultural land reserves.
-- **📋 "Pro-Tier" Bento Reports**: Comprehensive, modular intelligence briefings featuring AI reasoning, companion planting synergy, and risk mitigation strategies.
+### Climate Trend Analysis
+The dashboard provides:
+* 10-year rainfall trends
+* Temperature change visualization
+* Historical climate comparisons
+Interactive charts are built using **Recharts** for intuitive analysis.
 
-## 🛠️ Tech Stack
+### Agricultural Resource Insights
+The platform includes:
+* Irrigation coverage tracking
+* Agricultural land availability indicators
+* Regional agricultural summaries
 
-### Frontend
-- **React (Vite)**: Ultra-fast component-based architecture.
-- **Leaflet.js**: High-performance interactive map rendering.
-- **Recharts**: Professional-grade data visualization for climate trends.
-- **Vanilla CSS**: Custom glassmorphism design system with the **Outfit** and **Inter** font families.
+---
 
-### Backend
-- **FastAPI**: Modern, high-performance Python web framework.
-- **Scikit-learn**: Random Forest Classifier for agricultural intelligence.
-- **Pandas/NumPy**: Large-scale data processing and cleaning.
-- **NASA POWER API**: Real-world satellite-based weather data.
+**Why This Project Was Built**
 
-## ⚙️ Installation & Setup
+Agriculture remains one of the most important sectors in Nepal, yet many farming decisions are still heavily dependent on traditional methods and inconsistent environmental conditions.
+
+With increasing climate variability and limited access to localized agricultural intelligence, farmers often lack reliable decision-support tools.
+
+This project was built to explore how:
+* Artificial Intelligence
+* Climate Data
+* Geographic Information Systems
+* Data Visualization
+can be combined to create a practical agricultural intelligence system tailored for Nepal.
+
+---
+
+**System Architecture**
+```text
+NASA POWER API
+        ↓
+Climate Data Collection
+        ↓
+Data Cleaning & Processing
+        ↓
+Feature Engineering
+        ↓
+Random Forest ML Model
+        ↓
+FastAPI Backend
+        ↓
+Interactive Frontend Dashboard
+        ↓
+District-Level Agricultural Insights
+```
+
+---
+
+**Tech Stack**
+
+**Frontend**
+* React (Vite)
+* Leaflet.js
+* Recharts
+* HTML/CSS
+
+**Backend**
+* FastAPI
+* Python
+
+**Machine Learning & Data Processing**
+* Scikit-learn
+* Pandas
+* NumPy
+
+**Data Sources**
+* NASA POWER API
+* Nepal District GeoJSON Data
+
+---
+
+**Machine Learning Pipeline**
+1. Climate data collection from NASA POWER API
+2. Data preprocessing and normalization
+3. Feature extraction from environmental variables
+4. Model training using Random Forest Classifier
+5. District-level crop prediction and recommendation generation
+
+---
+
+**Why Random Forest?**
+* Performs well on structured environmental datasets
+* Handles nonlinear relationships effectively
+* Reduces overfitting risk
+* Provides stable predictions across varying climate conditions
+* Works efficiently with mixed agricultural variables
+
+---
+
+**Project Structure**
+```text
+AgroNepal-Intelligence/
+│
+├── main.py
+├── seed_districts.py
+├── index.html
+├── README.md
+│
+├── frontend/
+│   ├── components/
+│   ├── assets/
+│   └── charts/
+│
+├── backend/
+│   ├── api/
+│   ├── models/
+│   └── services/
+│
+├── datasets/
+│
+└── screenshots/
+```
+
+---
+
+**Installation & Setup**
 
 ### Prerequisites
-- Python 3.9+
-- Node.js 16+
-- NPM or Yarn
+* Python 3.9+
+* Node.js 16+
+* npm or yarn
 
-### 1. Backend Setup
-1. **Navigate to the backend directory:**
+### Backend Setup
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Alpha107/AgroNepal-Intelligence.git
+   ```
+2. **Navigate to backend:**
    ```bash
    cd backend
    ```
-2. **Create and activate a virtual environment:**
-   - **Windows:**
+3. **Create virtual environment:**
+   * **Windows:**
      ```bash
      python -m venv venv
      .\venv\Scripts\activate
      ```
-   - **macOS/Linux:**
+   * **Linux/macOS:**
      ```bash
      python3 -m venv venv
      source venv/bin/activate
      ```
-3. **Install dependencies:**
+4. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
-4. **Initialize data (GeoJSON & ML Model):**
+5. **Initialize data:**
    ```bash
    python seed_districts.py
    ```
-5. **Start the API Server:**
+6. **Run backend server:**
    ```bash
    python main.py
    ```
-   *The backend will be running at `http://localhost:8000`. You can verify it by visiting `http://localhost:8000/api/health`.*
+   *Backend runs at: `http://localhost:8000`*
 
-### 2. Frontend Setup
-1. **Navigate to the frontend directory:**
+### Frontend Setup
+1. **Navigate to frontend:**
    ```bash
    cd frontend
    ```
@@ -90,64 +209,83 @@ I wanted to build a bridge, a tool that doesn't just display weather numbers, bu
    ```bash
    npm install
    ```
-3. **Start the development server:**
+3. **Run development server:**
    ```bash
    npm run dev
    ```
-   *The frontend will be available at `http://localhost:5173`.*
+   *Frontend runs at: `http://localhost:5173`*
 
 ---
 
-## 🚦 Quick Verification
-- **Backend Health Check**: Open [http://localhost:8000/api/health](http://localhost:8000/api/health) (Should show `{"status": "ok"}`)
-- **Frontend Dashboard**: Open [http://localhost:5173](http://localhost:5173)
+**Screenshots**
 
-## 🧠 The AI Model
+### Dashboard Overview
+<img width="1848" height="845" alt="Dashboard Overview" src="https://github.com/user-attachments/assets/62d1240e-126c-488e-b7b6-f59cf2687810" />
 
-The **AgroNepal Intelligence Engine** uses a Random Forest Classifier trained on multidimensional climate vectors:
-- **Temperature Profile**: Multi-year seasonal averages.
-- **Annual Precipitation**: Normalized rainfall patterns.
-- **Soil pH Correlation**: District-specific acidity/alkalinity profiles.
-- **Humidity & Moisture**: Atmospheric moisture tracking.
+### District Intelligence View
+<img width="1857" height="817" alt="District Intelligence" src="https://github.com/user-attachments/assets/13af9be1-4bd0-4d69-96fc-725f0f7e9ad5" />
 
-The model doesn't just predict crops; it analyzes **Ecological Synergies** to suggest companion planting (e.g., *Maize + Beans*) and identifies **Risk Hazards** like frost or drought trends.
+### Climate Trend Analysis
+<img width="1267" height="655" alt="Climate Trends" src="https://github.com/user-attachments/assets/4df70a3f-e17a-4f5e-8342-1a16f7001508" />
 
-## 🗺️ Data Sources
-- **Map Boundaries**: High-resolution GeoJSON for Nepal's 77 districts.
-- **Climate Data**: NASA Prediction Of Worldwide Energy Resources (POWER).
-- **Agricultural Logic**: Expert-vetted ecological zone crop mapping.
-
-## Images
-
-<img width="1318" height="802" alt="Screenshot 2026-04-28 110627" src="https://github.com/user-attachments/assets/79a420c7-397e-4502-b679-fc9a84ed1206" />
+### Crop Recommendation Panel
+<img width="1201" height="793" alt="Crop Recommendation" src="https://github.com/user-attachments/assets/58c7b24c-97d1-4f93-9442-6e0e012f6d4e" />
 
 ---
 
-<img width="1251" height="566" alt="Screenshot 2026-04-28 110649" src="https://github.com/user-attachments/assets/fc6e679c-a19a-4a1a-a084-84483b44b13c" />
+**Potential Real-World Applications**
+* Smart agricultural planning
+* Climate-aware crop recommendation
+* Agricultural research support
+* Government-level agricultural analytics
+* Rural technology initiatives
+* Educational and research demonstrations
 
 ---
 
-<img width="1267" height="655" alt="Screenshot 2026-04-28 110656" src="https://github.com/user-attachments/assets/4df70a3f-e17a-4f5e-8342-1a16f7001508" />
+**Current Limitations**
+* Recommendations are currently district-level only
+* No real-time IoT sensor integration yet
+* Crop prediction depends on available climate datasets
+* Soil quality analysis is limited
+* Requires internet access for external API data
 
 ---
 
-<img width="1249" height="552" alt="Screenshot 2026-04-28 110704" src="https://github.com/user-attachments/assets/77204b35-dc4c-435f-9b5b-443eac926890" />
+**Future Improvements**
+* IoT-based live soil monitoring
+* Satellite imagery integration
+* Deep learning climate forecasting
+* Mobile application support
+* Nepali-language farmer interface
+* AI chatbot for agricultural guidance
+* Cloud deployment and scalability improvements
 
 ---
 
-<img width="1201" height="793" alt="Screenshot 2026-04-28 110714" src="https://github.com/user-attachments/assets/58c7b24c-97d1-4f93-9442-6e0e012f6d4e" />
+**Contributing**
+Contributions, ideas, and improvements are welcome.
+If you would like to contribute:
+1. Fork the repository
+2. Create a feature branch
+3. Commit changes
+4. Submit a pull request
 
 ---
 
-<img width="1084" height="672" alt="Screenshot 2026-04-28 110722" src="https://github.com/user-attachments/assets/f9693444-8a75-4c69-b167-cb164a2066c3" />
+**License**
+This project is licensed under the MIT License.
 
 ---
 
-## 🤝 Contributing
-Contributions are welcome! If you'd like to improve the AI model or add new features, please fork the repository and submit a pull request.
+**Author**
+**Abashesh Ranabhat**
+Computer Engineer | AI & Robotics Enthusiast | ML Practitioner
 
-## 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+[GitHub](https://github.com/Alpha107) | [LinkedIn](https://www.linkedin.com/in/abashesh-ranabhat/)
 
 ---
-*Built for a more prosperous agricultural future of Nepal by Abashesh Ranabhat.*
+
+**Final Note**
+
+AgroNepal Intelligence represents the intersection of Artificial Intelligence, Climate Science, Geographic Intelligence, and Agricultural Technology with the goal of building smarter, more accessible, and data-driven agricultural systems for Nepal.
